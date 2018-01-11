@@ -1,3 +1,5 @@
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 class Config(object):
     @staticmethod
     def init_app():
@@ -10,6 +12,8 @@ class DevelopConfig(Config):
 class TestingConfig(Config):
     TESTING = True
     SECRET_KEY = 'Monte Live testing key'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir,
+                                                          'live.sqlite')
 
 class ProductionConfig(Config):
     DEBUG = False
