@@ -1,5 +1,8 @@
+#!/home/monte/webdev/venv/bin/python
+# -*- coding:utf-8 -*-
 from . import main
+from flask import render_template
 
 @main.route('/')
 def index():
-    return 'hello world'
+    return render_template('index.html')
