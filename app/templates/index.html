@@ -3,11 +3,13 @@
 {% block content %}
     {{ super() }}
     <div id="main" class="container">
-        <div class="col-3  div-inline">
-            <a class="no-underline" href="#theme1"/>
-            <h3 class="text-center">主题</h3>
-            <p class="text-center text-muted">这是主题的简介这是主题的简介这是主题的简介这是主题的简介这是主题的简介这是主题的简介</p>
-        </div>
+    	{% for theme in themes %}
+    		<div class="col-3  div-inline">
+	            <a class="no-underline" href="#theme1"/>
+	            <h3 class="text-center">{{ theme.title }}</h3>
+	            <p class="text-center text-muted">{{ theme.brief }}</p>
+	        </div>
+    	{% endfor %}
     </div>
 {% endblock %}
 

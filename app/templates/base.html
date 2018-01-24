@@ -1,6 +1,9 @@
 {% extends "bootstrap/base.html" %}
 {% block title %}书法教学{% endblock %}
-
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+{% endblock %}
 {% block content %}
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -11,11 +14,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">书法</a>
+                <a class="navbar-brand" href="#">书法</a> 
             </div>
             <div class="collapse navbar-collapse navbar-right" id="login_panel">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><img id="user_head" src="assets/user_head.jpg" alt="monte" class="img-circle"></li>
+                    <li><img id="user_head" src="../static/images/user_head.jpg" alt="monte" class="img-circle"></li>
                     <li><a href="#login">登录</a></li>            
                     <li><a href="#logout">登出</a></li>
                 </ul>
