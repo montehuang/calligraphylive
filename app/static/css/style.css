@@ -4,7 +4,10 @@ body
 	background-repeat:			repeat,							no-repeat;
 	background-size:			auto,							100% 100%;
 }
-
+html,body
+{
+	height: 100%;
+}
 #user_head{
 	width:50px;
 	height:50px;
@@ -31,6 +34,5 @@ body
 }
 #main {
 	background:#ffffff;
-	min-height: 1000px;
+	min-height: 100%;
 }
-
